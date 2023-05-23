@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <script src="https://js.bootpay.co.kr/bootpay-4.3.1.min.js" type="application/javascript"></script>
