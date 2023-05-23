@@ -2,34 +2,38 @@
 <html>
 <head>
 </head>
-<body>
+  <body>
+      <script src="https://js.bootpay.co.kr/bootpay-4.3.1.min.js" type="application/javascript"></script>
+      <script>
+          BootPay.request({
+              price: '3000',
+              application_id: "646c3b603049c8001bf8be2f",
+              name: '블링블링 마스카라',
+              pg: 'nicepay',
+              method: 'card',
+              show_agree_window: 0,
+              items: [
+                  {
+                      item_name: '나는 아이템',
+                      qty: 1,
+                      unique: '123',
+                      price: 3000,
+                  }
+              ],
+              order_id: '고유order_id_1234',
+          }).error(function (data) {
 
-    <input type="button" id="naverPayBtn" value="네이버페이 결제 버튼">
-    <script src="https://nsp.pay.naver.com/sdk/js/naverpay.min.js"></script>
+              console.log(data);
+          }).cancel(function (data) {
 
-    <script>
-        var oPay = Naver.Pay.create({
-            "mode": "production", // development or production
-            "clientId": "u86j4ripEt8LRfPGzQ8", // clientId
-            "chainId": "TDZSUHBoVGRFS2l" // chainId
-        });
+              console.log(data);
+          }).close(function (data) {
 
-        //직접 만드신 네이버페이 결제버튼에 click Event를 할당하세요
-        var elNaverPayBtn = document.getElementById("naverPayBtn");
+              console.log(data);
+          }).done(function (data) {
 
-        elNaverPayBtn.addEventListener("click", function () {
-            oPay.open({
-                "merchantUserKey": "가맹점 사용자 식별키",
-                "merchantPayKey": "가맹점 주문 번호",
-                "productName": "상품명을 입력하세요",
-                "totalPayAmount": "1000",
-                "taxScopeAmount": "1000",
-                "taxExScopeAmount": "0",
-                "returnUrl": "사용자 결제 완료 후 결제 결과를 받을 URL"
-            });
-        });
-
-    </script>
-
-</body>
+              console.log(data);
+          });
+      </script>
+  </body>
 </html>
