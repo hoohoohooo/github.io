@@ -20,7 +20,7 @@
                 orderId: 'jibrTspM6ITMj7kBAS3fU',
                 orderName: '토스 티셔츠 외 2건',
                 customerName: '박토스',
-                successUrl: 'http://localhost:8080/success',
+                successUrl: 'https://hoohoohooo.github.io/testWeb.io/backToUnity.html',
                 failUrl: 'http://localhost:8080/fail',
             })
         })
