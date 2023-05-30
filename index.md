@@ -14,6 +14,10 @@
         var clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
         var tossPayments = TossPayments(clientKey)
         var button = document.getElementById('payment-button') // 결제하기 버튼
+        const myKeysValues = window.location.search;
+        console.log("k & v: ",myKeysValues);
+        const urlParams = new URLSearchParams(myKeysValues);
+        console.log(urlParams.get('amt'));
         button.addEventListener('click', function () {
             tossPayments.requestPayment('카드', {
                 amount: 15000,
