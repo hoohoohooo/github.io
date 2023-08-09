@@ -4,33 +4,7 @@
     <script src="https://js.tosspayments.com/v1/payment"></script>
 </head>
 <body>
-    <section>
-         ... 
-        <span>총 주문금액</span>
-        <span>15,000 원</span>
-        <button id="payment-button">15,000원 결제하기</button>
-    </section>
-    <script>
-        
-        //var clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
-        //var tossPayments = TossPayments(clientKey)
-        //var button = document.getElementById('payment-button') // 결제하기 버튼
-        //const myKeysValues = window.location.search;
-        //console.log("k & v: ",myKeysValues);
-        //const urlParams = new URLSearchParams(myKeysValues);
-        //console.log(urlParams.get('amt'));
-        //button.addEventListener('click', function () {
-        //    tossPayments.requestPayment('카드', {
-        //        //amount: 15000,
-        //        amount: urlParams.get('amt'),
-        //        orderId: 'jibrTspM6ITMj7kBAS3fU',
-        //        orderName: '토스 티셔츠 외 2건',
-        //        customerName: '박토스',
-        //        successUrl: 'https://hoohoohooo.github.io/testWeb.io/backToUnity.html',
-        //        failUrl: 'http://localhost:8080/fail',
-        //    })
-        //})
-        """다운로드 받은 csv 파일을 open() 함수를 이용해서 열어보는 실습"""
+    """다운로드 받은 csv 파일을 open() 함수를 이용해서 열어보는 실습"""
 import csv
 f = open(
     "C:/Users/7513/Desktop/STCS_폭염일수_20230809093706.csv",
@@ -105,6 +79,33 @@ for data in dataList:
         yy = yymmdd[0]
 print('폭염 종료일 중 가장 늦은 일자는', dd)
 print('폭염 종료일이 가장 늦었던 해는', yy)
+    <section>
+         ... 
+        <span>총 주문금액</span>
+        <span>15,000 원</span>
+        <button id="payment-button">15,000원 결제하기</button>
+    </section>
+    <script>
+        
+        //var clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
+        //var tossPayments = TossPayments(clientKey)
+        //var button = document.getElementById('payment-button') // 결제하기 버튼
+        //const myKeysValues = window.location.search;
+        //console.log("k & v: ",myKeysValues);
+        //const urlParams = new URLSearchParams(myKeysValues);
+        //console.log(urlParams.get('amt'));
+        //button.addEventListener('click', function () {
+        //    tossPayments.requestPayment('카드', {
+        //        //amount: 15000,
+        //        amount: urlParams.get('amt'),
+        //        orderId: 'jibrTspM6ITMj7kBAS3fU',
+        //        orderName: '토스 티셔츠 외 2건',
+        //        customerName: '박토스',
+        //        successUrl: 'https://hoohoohooo.github.io/testWeb.io/backToUnity.html',
+        //        failUrl: 'http://localhost:8080/fail',
+        //    })
+        //})
+        
     </script>
 </body>
 </html>
