@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="userid"></p>
+
+<script>
+  const myKeysValues = window.location.search;
+  console.log("k & v: ",myKeysValues);
+  const urlParams = new URLSearchParams(myKeysValues);
+  console.log(urlParams.get('name'));
+  document.write(urlParams.get('name') + '<br>'); 
+</script>
+
+</body>
+</html>
