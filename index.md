@@ -20,8 +20,18 @@
         console.log("k & v: ",myKeysValues);
         const urlParams = new URLSearchParams(myKeysValues);
         console.log(urlParams.get('amt'));
-        button.addEventListener('click', function () {
-            tossPayments.requestPayment('카드', {
+        //button.addEventListener('click', function () {
+        //    tossPayments.requestPayment('카드', {
+        //        amount: 15000,
+        //        //amount: urlParams.get('amt'),
+        //        orderId: 'jibrTspM6ITMj7kBAS3fU',
+        //        orderName: '토스 티셔츠 외 2건',
+        //        customerName: '박토스',
+        //        successUrl: 'https://hoohoohooo.github.io/testWeb.io/backToUnity.html',
+        //        failUrl: 'http://localhost:8080/fail',
+        //    })
+        //})
+        tossPayments.requestPayment('카드', {
                 amount: 15000,
                 //amount: urlParams.get('amt'),
                 orderId: 'jibrTspM6ITMj7kBAS3fU',
@@ -30,8 +40,8 @@
                 successUrl: 'https://hoohoohooo.github.io/testWeb.io/backToUnity.html',
                 failUrl: 'http://localhost:8080/fail',
             })
-        })
-        
     </script>
 </body>
 </html>
+
+
