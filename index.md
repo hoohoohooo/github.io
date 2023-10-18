@@ -6,10 +6,11 @@
 <body>
    
     <section>
-    //     ... 
-    //    <span>총 주문금액</span>
-    //    <span>15,000 원</span>
-    //    <button id="payment-button">15,000원 결제하기</button>
+    <!--     ... 
+        <span>총 주문금액</span>
+        <span>15,000 원</span>
+        <button id="payment-button">15,000원 결제하기</button>
+        -->
     </section>
     <script>
         
