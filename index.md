@@ -33,8 +33,8 @@
         //    })
         //})
         tossPayments.requestPayment('카드', {
-                amount: 15000,
-                //amount: urlParams.get('amt'),
+                //amount: 15000,
+                amount: urlParams.get('amt'),
                 orderId: 'jibrTspM6ITMj7kBAS3fU',
                 orderName: '토스 티셔츠 외 2건',
                 customerName: '박토스',
