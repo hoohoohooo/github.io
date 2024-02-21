@@ -45,12 +45,11 @@ loadMap('','37\t127');
 //});
 
     function loadMap(jsonStr,phonePosDataStr){
-        //
         location.href = "uniwebview://showing map...";
         var phonePos = phonePosDataStr.split("\t");
-        var x = parsFloat(phonePos[0]);
-        var y = parsFloat(phonePos[1]);
-        var position = new naver.maps.LatLng(x,y);
+        //var x = parsFloat(phonePos[0]);
+        //var y = parsFloat(phonePos[1]);
+        var position = new naver.maps.LatLng(phonePos[0],phonePos[1]);
         var map = new naver.maps.Map(mapDiv,{
             center: position,
             zoom: 15
