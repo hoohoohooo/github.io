@@ -44,9 +44,17 @@ var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
 //    location.href = "uniwebview://action?key=value&anotherKey=anotherValue";
 //});
 
-    function loadMap(jsonStr,posDataStr){
+    function loadMap(jsonStr,phonePosDataStr){
         //
-        
+        var phonePos = phonePosDataStr.split("\t");
+        var x = parsFloat(phonePos[0]);
+        var y = parsFloat(phonePos[1]);
+        var position = new naver.maps.LatLng(x,y);
+        var map = new naver.maps.Map(mapDiv,{
+            center: position,
+            zoom 15
+        }
+        location.href = "uniwebview://showing map successful";
     }
 </script>
 
