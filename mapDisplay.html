@@ -98,6 +98,18 @@ var map;
     function uniWebViewCommunicationTest(str){
         location.href = "uniwebview://" + str;
     }
+    function setMarker(str){
+        var infoArr = str.split('\t');
+        var tmpMarker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(infoArr[1],infoArr[2]),
+                map: map,
+                title: infoArr[0]
+            });
+        naver.maps.Event.addListener(tmpMarker,"click",function(e){
+                location.href = "uniwebview://" + tmpMarker.title;
+            });
+            
+    }
 </script>
 
 </body>
