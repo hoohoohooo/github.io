@@ -77,7 +77,7 @@ var map = new naver.maps.Map(mapDiv,{
     }
 
     function setCenter(str){
-        location.href = "uniwebview://setting center...";
+        location.href = "uniwebview://setting center..." + "to " + str;
         var posArr = str.split('@');
         var position = new naver.maps.LatLng(posArr[0],posArr[1]);
         map.setCenter(position);
