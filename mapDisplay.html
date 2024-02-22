@@ -62,6 +62,7 @@ loadMap('B7B3B0DDFE0ABBE3\t35.1745544\t129.1282340\nB7B3B0DDFE0ABBE3\t35.1688179
         var markers = [];
         for(let i = 0;i<shops.length;i++){
             var infoArr = shops[i].split("\t");
+            console.log(infoArr[0]);
             var tmpMarker = new naver.maps.Marker({
                 position: new naver.maps.LatLng(infoArr[1],infoArr[2]),
                 map: map,
