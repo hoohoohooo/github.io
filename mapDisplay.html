@@ -57,6 +57,21 @@ var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
             zoom: 15
         });
         location.href = "uniwebview://showing map successful";
+        location.href = "uniwebview://placing markers...";
+        var shops = jsonStr.split("\n");
+        var markers = [];
+        for(let i = 0;i<shops.length;i++){
+            var infoArr = shops[i].split("\t");
+            var tmpMarker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(info[1],info[2]),
+                map: map,
+                title: shops[0]
+            });
+            naver.maps.Event.addListener(tmpMarker,"click",function(e){
+                location.href = "uniwebview://" + tmpMarker.title;
+            }
+            markers.push(tmpMarker);
+        }
     }
 </script>
 
