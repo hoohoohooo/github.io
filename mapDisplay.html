@@ -82,6 +82,9 @@ var map = new naver.maps.Map(mapDiv,{
         var position = new naver.maps.LatLng(posArr[0],posArr[1]);
         map.setCenter(position);
     }
+    function uniWebViewCommunicationTest(str){
+        location.href = "uniwebview://" + str;
+    }
 </script>
 
 </body>
