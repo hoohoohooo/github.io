@@ -78,6 +78,7 @@ setCenter('35\t128');
     }
 
     function setCenter(str){
+        location.href = "uniwebview://setting center...";
         var posArr = str.split('\t');
         var position = new naver.maps.LatLng(posArr[0],posArr[1]);
         map.setCenter(position);
