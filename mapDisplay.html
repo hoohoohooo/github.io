@@ -69,7 +69,7 @@ var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
             });
             naver.maps.Event.addListener(tmpMarker,"click",function(e){
                 location.href = "uniwebview://" + tmpMarker.title;
-            }
+            });
             markers.push(tmpMarker);
         }
     }
