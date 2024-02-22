@@ -77,13 +77,16 @@
     }
 
     function loadMap(){
-        location.href = "uniwebview://showing map...";
+        location.href = "uniwebview://showing map...0";
         var mapDiv = document.getElementById('map'); 
+        location.href = "uniwebview://showing map...1";
         var position = new naver.maps.LatLng(37.3595704, 127.105399);
+        location.href = "uniwebview://showing map...2";
         var map = new naver.maps.Map(mapDiv,{
         center: position,
         zoom: 15
         });
+        location.href = "uniwebview://showing map...3";
         return map;
     }
 
