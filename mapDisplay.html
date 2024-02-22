@@ -76,6 +76,12 @@ var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
         }
     }
 
+    function loadMap(){
+        location.href = "uniwebview://showing map...";
+        var position = new naver.maps.LatLng(phonePos[0],phonePos[1]);
+        var map = new naver.maps.Map(mapDiv);
+    }
+
     function setCenter(str){
         location.href = "uniwebview://setting center..." + "to " + str;
         var posArr = str.split('@');
