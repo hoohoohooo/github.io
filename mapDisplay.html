@@ -47,33 +47,33 @@ var map = new naver.maps.Map(mapDiv,{
 //    location.href = "uniwebview://action?key=value&anotherKey=anotherValue";
 //});
 
-    function loadMap(phonePosDataStr){
+    function loadMap(phonePosDataStr, jsonStr){
         location.href = "uniwebview://showing map...";
         var phonePos = phonePosDataStr.split("\t");
         //var x = parsFloat(phonePos[0]);
         //var y = parsFloat(phonePos[1]);
         var position = new naver.maps.LatLng(phonePos[0],phonePos[1]);
-        map = new naver.maps.Map(mapDiv,{
+        var map = new naver.maps.Map(mapDiv,{
             center: position,
             zoom: 15
         });
         location.href = "uniwebview://showing map successful";
-        //location.href = "uniwebview://placing markers...";
-        //var shops = jsonStr.split("\n");
-        //var markers = [];
-        //for(let i = 0;i<shops.length;i++){
-        //    var infoArr = shops[i].split("\t");
-        //    console.log(infoArr[0]);
-        //    var tmpMarker = new naver.maps.Marker({
-        //        position: new naver.maps.LatLng(infoArr[1],infoArr[2]),
-        //        map: map,
-        //        title: shops[0]
-        //    });
-        //    naver.maps.Event.addListener(tmpMarker,"click",function(e){
-        //        location.href = "uniwebview://" + tmpMarker.title;
-        //    });
-        //    markers.push(tmpMarker);
-        //}
+        location.href = "uniwebview://placing markers...";
+        var shops = jsonStr.split("\n");
+        var markers = [];
+        for(let i = 0;i<shops.length;i++){
+            var infoArr = shops[i].split("\t");
+            console.log(infoArr[0]);
+            var tmpMarker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(infoArr[1],infoArr[2]),
+                map: map,
+                title: shops[0]
+            });
+            naver.maps.Event.addListener(tmpMarker,"click",function(e){
+                location.href = "uniwebview://" + tmpMarker.title;
+            });
+            markers.push(tmpMarker);
+        }
     }
 
     function setCenter(str){
