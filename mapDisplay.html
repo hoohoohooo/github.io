@@ -13,7 +13,31 @@
     <link rel="stylesheet" type="text/css" href="../../docs/css/examples-base.css" />
 </head>
 <body>
+<style type="text/css">
+.speech-bubble {
+  position: relative;
+	background: #6e7272;
+	border-radius: .4em;
+    min-width:100px;
+    text-align:center;
+    color:white;
+    left:-43px;
+}
 
+.speech-bubble:after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-top-color: #6e7272;
+	border-bottom: 0;
+	margin-left: -11px;
+	margin-bottom: -11px;
+}
+</style>
 <!-- @category Map -->
 <div id="map" style="width:100%;height:600px;"></div>
 <div id="wrap" class="section">
@@ -103,6 +127,15 @@ var map;
                 position: new naver.maps.LatLng(infoArr[1],infoArr[2]),
                 map: map,
                 title: infoArr[0]
+                icon: {
+                    content: [
+                        '<div class="wrap">',
+                            '<div class="speech-bubble">0</div>',
+                        '</div>'
+                    ].join(''),
+                    size: new naver.maps.Size(22, 35),
+                    anchor: new naver.maps.Point(11, 35)
+                    }
             });
         naver.maps.Event.addListener(tmpMarker,"click",function(e){
                 location.href = "uniwebview://" + tmpMarker.title;
