@@ -123,6 +123,7 @@ var map;
     }
     function setMarker(str){
         var infoArr = str.split('\t');
+	location.href = "uniwebview://" +infoArr[3];
         var tmpMarker = new naver.maps.Marker({
                 position: new naver.maps.LatLng(infoArr[1],infoArr[2]),
                 map: map,
