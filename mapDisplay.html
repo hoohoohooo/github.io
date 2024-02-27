@@ -139,7 +139,7 @@ var map;
                     }
             });
         naver.maps.Event.addListener(tmpMarker,"click",function(e){
-                location.href = "uniwebview://" + tmpMarker.title;
+                location.href = "uniwebview://markerClickAnswer" + tmpMarker.title;
             });
             
     }
