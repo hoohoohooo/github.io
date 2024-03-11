@@ -179,7 +179,7 @@ var map;
 	var btnVisible = false;
 function gettingShopInfo(str){
 	location.href = "uniwebview://startingGetting" + btnVisible;
-	if(btnVisible){
+	if(btnVisible == true){
 		$("shopFocusBtn").fadeOut("1",function(){
 			let btn=document.getElementById("shopFocusBtn");
 			btn.innerHTML = str;
