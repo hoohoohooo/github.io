@@ -180,7 +180,7 @@ var map;
 function gettingShopInfo(str){
 	location.href = "uniwebview://startingGetting" + btnVisible;
 	if(btnVisible){
-		$("shopFocusBtn").fadeOut(function(){
+		$("shopFocusBtn").fadeOut("1",function(){
 			let btn=document.getElementById("shopFocusBtn");
 			btn.innerHTML = str;
 			console.log("???");
