@@ -181,20 +181,16 @@ function gettingShopInfo(str){
 	location.href = "uniwebview://startingGetting";
 	if(btnVisible){
 		$("shopFocusBtn").fadeOut(function(){
-			var infoArr = str.split('\n');
-			location.href = "uniwebview://"+infoArr[0];
 			let btn=document.getElementById("shopFocusBtn");
-			btn.innerHTML = infoArr[0];
+			btn.innerHTML = str;
 			console.log("???");
 			btnVisible = true;
 			$("shopFocusBtn").fadeIn();
 		});
 	}
 	else{
-		var infoArr = str.split('\n');
-		location.href = "uniwebview://"+infoArr[0];
 		let btn=document.getElementById("shopFocusBtn");
-		btn.innerHTML = infoArr[0];
+		btn.innerHTML = str;
 		console.log("???");
 		btnVisible = true;
 		$("shopFocusBtn").fadeIn();
