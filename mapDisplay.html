@@ -190,6 +190,7 @@ function gettingShopInfo(shopinfo){
 		});
 	}
 	else{
+		$("shopFocusBtn").fadeIn();
 		var infoArr = str.split('\t');
 		location.href = "uniwebview://"+infoArr[0];
 		let btn=document.getElementById("shopFocusBtn");
