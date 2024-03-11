@@ -178,7 +178,6 @@ var map;
     }
 	var btnVisible = false;
 function gettingShopInfo(str){
-	location.href = "uniwebview://startingGetting";
 	if(btnVisible){
 		$("shopFocusBtn").fadeOut(function(){
 			let btn=document.getElementById("shopFocusBtn");
@@ -186,6 +185,7 @@ function gettingShopInfo(str){
 			console.log("???");
 			btnVisible = true;
 			$("shopFocusBtn").fadeIn();
+			location.href = "uniwebview://startingGetting";
 		});
 	}
 	else{
@@ -194,6 +194,7 @@ function gettingShopInfo(str){
 		console.log("???");
 		btnVisible = true;
 		$("shopFocusBtn").fadeIn();
+		location.href = "uniwebview://startingGetting";
 	}
 }
 function showFocusBtn(){
