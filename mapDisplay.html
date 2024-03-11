@@ -178,6 +178,7 @@ var map;
     }
 	var btnVisible = false;
 function gettingShopInfo(str){
+	location.href = "uniwebview://startingGetting" + btnVisible;
 	if(btnVisible){
 		$("shopFocusBtn").fadeOut(function(){
 			let btn=document.getElementById("shopFocusBtn");
