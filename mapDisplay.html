@@ -176,12 +176,29 @@ var map;
             });
             
     }
+	var btnVisible = false;
 function gettingShopInfo(shopinfo){
-	var infoArr = str.split('\t');
-	location.herf = "uniwebview://"+infoArr[0];
-	let btn=document.getElementById("shopFocusBtn");
-	btn.innerHTML = infoArr[0];
-	console.log("???");
+	if(btnVisible){
+		$("shopFocusBtn").fadeOut(function(){
+			var infoArr = str.split('\t');
+			location.herf = "uniwebview://"+infoArr[0];
+			let btn=document.getElementById("shopFocusBtn");
+			btn.innerHTML = infoArr[0];
+			console.log("???");
+			btnVisible = true;
+		});
+	}
+	else{
+		var infoArr = str.split('\t');
+		location.herf = "uniwebview://"+infoArr[0];
+		let btn=document.getElementById("shopFocusBtn");
+		btn.innerHTML = infoArr[0];
+		console.log("???");
+		btnVisible = true;
+	}
+}
+function showFocusBtn(){
+	$("shopFocusBtn").fadeIn();
 }
 </script>
 
