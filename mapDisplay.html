@@ -187,16 +187,17 @@ function gettingShopInfo(shopinfo){
 			btn.innerHTML = infoArr[0];
 			console.log("???");
 			btnVisible = true;
+			$("shopFocusBtn").fadeIn();
 		});
 	}
 	else{
-		$("shopFocusBtn").fadeIn();
 		var infoArr = str.split('\t');
 		location.href = "uniwebview://"+infoArr[0];
 		let btn=document.getElementById("shopFocusBtn");
 		btn.innerHTML = infoArr[0];
 		console.log("???");
 		btnVisible = true;
+		$("shopFocusBtn").fadeIn();
 	}
 }
 function showFocusBtn(){
