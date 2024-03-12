@@ -185,13 +185,16 @@ var map;
 function gettingShopInfo(str){
 	location.href = "uniwebview://"+" " +(btnVisible==false);
 	var arr = str.split('\t');
+	location.href = "uniwebview:// 0 "+" " arr[0];
+	location.href = "uniwebview:// 1 "+" " arr[1];
+	location.href = "uniwebview:// 2 "+" " arr[2];
 	//discountAmt -> minPrice -> actualPrice -> shopid;
 	if(btnVisible===true){
 		$("#shopFocusBtn").fadeOut("1",function(){
 			location.href = "uniwebview://startingGetting" + btnVisible;
 			let btn=document.getElementById("shopFocusBtn");
 			//btn.innerHTML = str;
-			btn.innerHTML = "<span class=\"discountAmtCSS\">"+ arr[0] + "</span>\t" + "<span class=\"minPriceCSS\">" + arr[1] + "</span>\n" + "<span class=\"actualPriceCSS\">" + arr[2] + "</span>";
+			btn.innerHTML = "<br><span class=\"discountAmtCSS\">"+ arr[0] + "</span>\t" + "<span class=\"minPriceCSS\">" + arr[1] + "</span>\n</br>" + "<span class=\"actualPriceCSS\">" + arr[2] + "</span>";
 			console.log("???");
 			btnVisible = true;
 			$("#shopFocusBtn").fadeIn();
@@ -201,7 +204,7 @@ function gettingShopInfo(str){
 		location.href = "uniwebview://startingGetting" + btnVisible;
 		let btn=document.getElementById("shopFocusBtn");
 		//btn.innerHTML = str;
-		btn.innerHTML = "<span class=\"discountAmtCSS\">"+ arr[0] + "</span>\t" + "<span class=\"minPriceCSS\">" + arr[1] + "</span>\n" + "<span class=\"actualPriceCSS\">" + arr[2] + "</span>";
+		btn.innerHTML = "<br><span class=\"discountAmtCSS\">"+ arr[0] + "</span>\t" + "<span class=\"minPriceCSS\">" + arr[1] + "</span>\n</br>" + "<span class=\"actualPriceCSS\">" + arr[2] + "</span>";
 		console.log("???");
 		btnVisible = true;
 		$("#shopFocusBtn").fadeIn();
