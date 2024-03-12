@@ -189,6 +189,8 @@ function gettingShopInfo(str){
 	location.href = "uniwebview:// 1 "+" " + arr[1];
 	location.href = "uniwebview:// 2 "+" " + arr[2];
 	//discountAmt -> minPrice -> actualPrice -> shopid;
+	let shopFocusBtn = document.getElementById("shopFocusBtn");
+	shopFocusBtn.removeEventListener("click",tellUnityToGoToReservationState);
 	if(btnVisible===true){
 		$("#shopFocusBtn").fadeOut("1",function(){
 			location.href = "uniwebview://startingGetting" + btnVisible;
@@ -209,11 +211,16 @@ function gettingShopInfo(str){
 		btnVisible = true;
 		$("#shopFocusBtn").fadeIn();
 	}
+	
+	shopFocusBtn.addEventListener("click",tellUnityToGoToReservationState);
 }
 var testBool = false;
 	
 function showFocusBtn(){
 	$("#shopFocusBtn").fadeIn();
+}
+function tellUnityToGoToReservationState(){
+	location.href = "uniwebview://toReservationState";
 }
 </script>
 
