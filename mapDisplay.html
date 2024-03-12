@@ -172,6 +172,7 @@ var map;
                     }
             });
         naver.maps.Event.addListener(tmpMarker,"click",function(e){
+		showFocusBtn();
                 location.href = "uniwebview://markerClickAnswer" + tmpMarker.title;
             });
             
