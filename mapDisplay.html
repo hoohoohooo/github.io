@@ -185,9 +185,9 @@ var map;
 function gettingShopInfo(str){
 	location.href = "uniwebview://"+" " +(btnVisible==false);
 	var arr = str.split('\t');
-	location.href = "uniwebview:// 0 "+" " arr[0];
-	location.href = "uniwebview:// 1 "+" " arr[1];
-	location.href = "uniwebview:// 2 "+" " arr[2];
+	location.href = "uniwebview:// 0 "+" " + arr[0];
+	location.href = "uniwebview:// 1 "+" " + arr[1];
+	location.href = "uniwebview:// 2 "+" " + arr[2];
 	//discountAmt -> minPrice -> actualPrice -> shopid;
 	if(btnVisible===true){
 		$("#shopFocusBtn").fadeOut("1",function(){
