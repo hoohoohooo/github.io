@@ -68,6 +68,16 @@
     margin-right: 10%;
     text-align: right;
 }
+.discountAmtCSS{
+	color: red;
+}
+.minPriceCSS{
+	font-size: 8px;
+	text-decoration: line-through;
+}
+.actualPriceCSS{
+	font-size: 12px;
+}
 	
 </style>
 <!-- @category Map -->
@@ -179,11 +189,14 @@ var map;
 	var btnVisible = false;
 function gettingShopInfo(str){
 	location.href = "uniwebview://"+" " +(btnVisible==false);
+	var arr = str.split('\t');
+	//discountAmt -> minPrice -> actualPrice -> shopid;
 	if(btnVisible===true){
 		$("#shopFocusBtn").fadeOut("1",function(){
 			location.href = "uniwebview://startingGetting" + btnVisible;
 			let btn=document.getElementById("shopFocusBtn");
-			btn.innerHTML = str;
+			//btn.innerHTML = str;
+			btn.innerHTML = "<span class=\"discountAmtCSS\">"+ arr[0] + "</span>\t" + "<span class=\"minPriceCSS\"> + arr[1] + "</span>\n" + "<span class=\"actualPriceCSS\">" + arr[2] + "</span>"
 			console.log("???");
 			btnVisible = true;
 			$("#shopFocusBtn").fadeIn();
@@ -192,7 +205,8 @@ function gettingShopInfo(str){
 	if(btnVisible===false){
 		location.href = "uniwebview://startingGetting" + btnVisible;
 		let btn=document.getElementById("shopFocusBtn");
-		btn.innerHTML = str;
+		//btn.innerHTML = str;
+		btn.innerHTML = "<span class=\"discountAmtCSS\">"+ arr[0] + "</span>\t" + "<span class=\"minPriceCSS\"> + arr[1] + "</span>\n" + "<span class=\"actualPriceCSS\">" + arr[2] + "</span>"
 		console.log("???");
 		btnVisible = true;
 		$("#shopFocusBtn").fadeIn();
